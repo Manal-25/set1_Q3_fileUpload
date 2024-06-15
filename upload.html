@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drag and Drop File Upload</title>
+    <style>
+        #drop-area {
+            border: 2px dashed #ccc;
+            border-radius: 20px;
+            width: 300px;
+            padding: 20px;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            margin: 50px auto;
+        }
+        #drop-area.highlight {
+            border-color: purple;
+        }
+        #fileElem {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="drop-area">
+        <form class="my-form">
+            <p>Drag & drop some files here, or click to select files</p>
+            <input type="file" id="fileElem" multiple accept="image/*" onchange="handleFiles(this.files)">
+            <label class="button" for="fileElem">Select some files</label>
+        </form>
+        <div id="gallery"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
